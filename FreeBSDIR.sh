@@ -58,6 +58,11 @@ grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|f
 grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /usr/local/www/ > $dir/22.1.Backdoor-VarWWWdir.txt
 echo "Finish Searching.\n"
 
+# Searching others malicious activity
+grep -Rinw /usr/home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" > $dir/23.ListSlot-$1.txt
+grep -Rinw /usr/local/www -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" > $dir/23.1.ListSlot-$1.txt
+echo "Finish Searching.\n"
+
 # Create Compressed File
 tar -czf Collection.tar.gz FreeBSDIR
 rm -rf FreeBSDIR

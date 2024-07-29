@@ -52,10 +52,10 @@ ls -alrt -R /usr/local/www > $dir/20.1.VarWWWdir.txt
 
 # Searching Backdoor File
 echo "Start Searching ..."
-grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /home/ > $dir/21.Backdoor-Homedir.txt
-grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /usr/home/ > $dir/21.1.Backdoor-Homedir.txt
-grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /var/www/ > $dir/22.Backdoor-VarWWWdir.txt
-grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /usr/local/www/ > $dir/22.1.Backdoor-VarWWWdir.txt
+grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /home/ --exclude-dir $dir/FreeBSDIR > $dir/21.Backdoor-Homedir.txt
+grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /usr/home/ --exclude-dir $dir/FreeBSDIR > $dir/21.1.Backdoor-Homedir.txt
+grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /var/www/ --exclude-dir $dir/FreeBSDIR > $dir/22.Backdoor-VarWWWdir.txt
+grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /usr/local/www/ --exclude-dir $dir/FreeBSDIR > $dir/22.1.Backdoor-VarWWWdir.txt
 echo "Finish Searching.\n"
 
 # Searching others malicious activity

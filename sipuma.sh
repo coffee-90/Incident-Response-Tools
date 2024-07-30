@@ -45,7 +45,7 @@ lastlogin > $dir/17.Lastlog.txt
 last > $dir/18.Last.txt
 
 # List Directory
-ls -alrt -R /home > $dir/19.Homedir.txt
+ls -alrt -R /home/www/sipuma.sragenkab.go.id > $dir/19.Homedir.txt
 #ls -alrt -R /usr/home > $dir/19.1.Homedir.txt
 #ls -alrt -R /var/www > $dir/20.VarWWWdir.txt
 #ls -alrt -R /usr/local/www > $dir/20.1.VarWWWdir.txt
@@ -56,12 +56,12 @@ echo "Start Searching ..."
 #grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /usr/home/ --exclude-dir=$dir > $dir/21.1.Backdoor-Homedir.txt
 #grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /var/www/ --exclude-dir=$dir > $dir/22.Backdoor-VarWWWdir.txt
 #grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /usr/local/www/ --exclude-dir=$dir > $dir/22.1.Backdoor-VarWWWdir.txt
-grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /home/ --exclude=$dir > $dir/21.2.Backdoor-Homedir.txt
+grep -REn "passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile|set_time_limit|base64__decode *\(" /home/www/sipuma.sragenkab.go.id/ --exclude=$dir > $dir/21.2.Backdoor-Homedir.txt
 echo "Finish Searching.\n"
 
 # Searching others malicious activity
 #grep -Rinw /usr/home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.ListSlot-$1.txt
-grep -Rinw /home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.2ListSlot-$1.txt
+grep -Rinw /home/www/sipuma.sragenkab.go.id -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.2ListSlot-$1.txt
 #grep -Rinw /usr/local/www -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.1.ListSlot-$1.txt
 echo "Finish Searching.\n"
 

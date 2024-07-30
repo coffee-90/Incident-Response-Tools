@@ -60,6 +60,7 @@ echo "Finish Searching.\n"
 
 # Searching others malicious activity
 grep -Rinw /usr/home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.ListSlot-$1.txt
+grep -Rinw /home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.2ListSlot-$1.txt
 grep -Rinw /usr/local/www -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "777" > $dir/23.1.ListSlot-$1.txt
 echo "Finish Searching.\n"
 

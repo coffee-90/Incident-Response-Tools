@@ -45,7 +45,7 @@ lastlogin > $dir/17.Lastlog.txt
 last > $dir/18.Last.txt
 
 # List Directory
-ls -alrt /home > $dir/19.Homedir.txt
+ls -alrt -R /home > $dir/19.Homedir.txt
 #ls -alrt -R /home/www/ > $dir/19.1.Homedir.txt
 #ls -alrt -R /var/www > $dir/20.VarWWWdir.txt
 #ls -alrt -R /usr/local/www > $dir/20.1.VarWWWdir.txt

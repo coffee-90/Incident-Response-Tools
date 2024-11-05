@@ -54,8 +54,8 @@ grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|f
 grep -RPn "(passthru|shell_exec|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|fclose|readfile) *\(" /var/www/ > $dir/22.Backdoor-VarWWWdir-$1.txt
 
 # Searching others malicious activity
-grep -Rinw /home -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "google-site-verification" > $dir/23.ListSlot-$1.txt
-grep -Rinw /var/www -e "slot" -e "gacor" -e "maxwin" -e "thailand" -e "sigmaslot" -e "zeus" -e "cuan" -e "google-site-verification" > $dir/23.ListSlotWWW-$1.txt
+grep -Rinw /home -e "togel" -e "gacor" -e "maxwin" -e "joker" -e "sigmaslot" -e "zeus" -e "cuan" -e "google-site-verification:" > $dir/23.ListSlot-$1.txt
+grep -Rinw /var/www -e "togel" -e "gacor" -e "maxwin" -e "joker" -e "sigmaslot" -e "zeus" -e "cuan" -e "google-site-verification:" > $dir/23.ListSlotWWW-$1.txt
 echo "Finish Searching.\n"
 
 # Create Compressed File
